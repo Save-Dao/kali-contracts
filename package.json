@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "hardhat clean",
     "build": "hardhat compile",
-    "test": "hardhat test"
+    "test": "hardhat test",
+    "deploy-xdai": "hardhat deploy-kali --network xdai"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,8 @@
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.3",
     "hardhat": "^2.9.3"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
   }
 }

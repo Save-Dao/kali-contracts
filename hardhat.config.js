@@ -1,5 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
-
+import dotenv from 'dotenv';
+dotenv.config({ path: '../.env' });
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
@@ -44,6 +45,13 @@ module.exports = {
       saveDeployments: true,
       tags: ["test", "local"],
     },
+    xdai: {
+      url: "https://dai.poa.network/",
+      chainId: 100,
+      gasPrice: 1000000000,
+      mnemonic: process.env.MNEMONIC
+    }
+
   },
   solidity: {
     compilers: [
